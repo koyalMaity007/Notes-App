@@ -1,0 +1,195 @@
+/* =========================
+   POMODORO SECTION
+========================= */
+
+#pomodoroSection{
+    padding-top: 10px;
+}
+
+.pomodoro-card{
+    width: 100%;
+    max-width: 760px;
+
+    margin: 30px auto;
+
+    background: #0b1730;
+
+    border: 1px solid rgba(255,255,255,0.06);
+
+    border-radius: 28px;
+
+    padding: 42px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 34px;
+
+    box-shadow: 0 12px 40px rgba(0,0,0,0.32);
+}
+
+/* TIMER */
+
+.circle-container{
+    position: relative;
+    width: 240px;
+    margin: auto;
+}
+
+.timer-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+}
+
+#timerDisplay{
+    font-size: 58px;
+    font-weight: 700;
+    color: white;
+}
+
+#timerMode{
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+/* SETTINGS */
+
+.timer-settings{
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.timer-settings input{
+    width: 95px;
+    height: 52px;
+
+    background: #101f3d;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    color: white;
+
+    font-size: 17px;
+}
+
+/* BUTTON GROUPS */
+
+.pomodoro-buttons,
+.music-controls{
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+.pomodoro-buttons button,
+.music-controls button{
+
+    min-width: 115px;
+
+    padding: 14px 20px;
+
+    border-radius: 14px;
+
+    border: none;
+
+    background: #16325f;
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.25s ease;
+}
+
+.pomodoro-buttons button:hover,
+.music-controls button:hover{
+    background: #1d4179;
+    transform: translateY(-2px);
+}
+
+/* MUSIC CARD */
+
+.music-player-card{
+
+    background: #0f1d38;
+
+    border-radius: 24px;
+
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.music-player-card h3{
+    font-size: 24px;
+    font-weight: 700;
+
+    text-align: center;
+}
+
+/* SELECT */
+
+#soundSelect{
+
+    height: 54px;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    background: #132445;
+
+    color: white;
+
+    padding: 0 16px;
+
+    font-size: 15px;
+}
+
+/* VOLUME */
+
+.volume-box{
+
+    width: 240px;
+
+    margin: auto;
+
+    background: #132445;
+
+    padding: 16px;
+
+    border-radius: 16px;
+}
+
+#volumeControl{
+    width: 100%;
+}
+
+/* SESSION TEXT */
+
+.pomodoro-card p{
+
+    text-align: center;
+
+    font-size: 18px;
+
+    color: #cbd5e1;
+}
