@@ -1,0 +1,165 @@
+.todo-editor {
+  display: flex;
+
+  gap: 14px;
+
+  margin: 25px 0;
+
+  flex-wrap: wrap;
+}
+
+.tasks-container {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+.task-card {
+  background: var(--card);
+
+  padding: 20px;
+
+  border-radius: 16px;
+
+  box-shadow: var(--shadow);
+}
+
+.task-card.completed {
+  opacity: 0.6;
+}
+
+.task-card.completed h3 {
+  text-decoration: line-through;
+}
+
+.priority {
+  display: inline-block;
+
+  margin-top: 10px;
+
+  padding: 6px 10px;
+
+  border-radius: 30px;
+
+  color: white;
+
+  font-size: 12px;
+}
+
+.priority.low {
+  background: #22c55e;
+}
+
+.priority.medium {
+  background: #f59e0b;
+}
+
+.priority.high {
+  background: #ef4444;
+}
+
+.task-actions {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 14px;
+}
+.section-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.task-filters {
+  display: flex;
+  gap: 10px;
+}
+
+.enhanced-editor {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  margin-bottom: 25px;
+}
+
+.task-progress-card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  box-shadow: var(--shadow);
+}
+
+.progress-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.progress-bar-wrap {
+  height: 14px;
+  background: var(--border);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(
+    90deg,
+    #3b82f6,
+    #60a5fa
+  );
+  border-radius: 30px;
+  transition: 0.4s ease;
+}
+
+.enhanced-task {
+  transition: 0.25s ease;
+}
+
+.enhanced-task:hover {
+  transform: translateY(-4px);
+}
+
+.task-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-bottom {
+  margin-top: 14px;
+  opacity: 0.8;
+}
+
+.overdue {
+  border: 1px solid #ef4444;
+}
+
+.overdue-text {
+  color: #ef4444;
+  font-weight: bold;
+}
+
+.complete-btn {
+  background: var(--primary);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+}

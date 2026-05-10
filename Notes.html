@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyDash</title>
+
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/notes.css" />
+  <link rel="stylesheet" href="css/todo.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <h2 class="logo">📚 StudyDash</h2>
+
+    <nav>
+      <button class="nav-btn active-nav" data-section="dashboardSection">Dashboard</button>
+      <button class="nav-btn" data-section="notesSection">Notes</button>
+      <button class="nav-btn" data-section="todosSection">Tasks</button>
+      <button class="nav-btn" data-section="pomodoroSection">Pomodoro</button>
+    </nav>
+
+    <button id="themeBtn" class="theme-btn">🌙</button>
+
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+  <!-- ================= DASHBOARD ================= -->
+  <section id="dashboardSection" class="page-section active-section">
+
+    <div class="dashboard-header">
+      <h1>Dashboard</h1>
+      <input type="text" placeholder="Search..." class="search-bar"/>
+    </div>
+
+    <div class="dashboard-grid">
+
+      <!-- LEFT -->
+      <div class="dashboard-main">
+
+        <div class="stats-grid">
+
+          <div class="stat-card">
+            <h3>Total Notes</h3>
+            <p id="totalNotes">0</p>
+          </div>
+
+          <div class="stat-card">
+            <h3>Tasks Done</h3>
+            <p id="completedTasks">0</p>
+          </div>
+
+          <div class="stat-card">
+            <h3>Focus Sessions</h3>
+            <p id="focusSessions">0</p>
+          </div>
+
+        </div>
+
+        <div class="widget-card">
+          <h2>Recent Note</h2>
+          <div id="recentNote"></div>
+        </div>
+
+        <!-- 📈 ANALYTICS (OPTION A) -->
+        <div class="widget-card">
+          <h2>📈 Weekly Analytics</h2>
+          <div id="analyticsContainer"></div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="dashboard-side">
+
+        <div class="progress-card">
+          <h3>Tasks</h3>
+          <div class="ring" data-value="70"><span id="taskPercent">70%</span></div>
+        </div>
+
+        <div class="progress-card">
+          <h3>Focus</h3>
+          <div class="ring" data-value="50"><span id="focusPercent">50%</span></div>
+        </div>
+
+        <div class="progress-card">
+          <h3>Notes</h3>
+          <div class="ring" data-value="40"><span id="notesPercent">40%</span></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= NOTES ================= -->
+  <section id="notesSection" class="page-section">
+
+    <div class="header">
+      <h1>Notes</h1>
+    </div>
+
+    <div class="editor-card">
+      <input id="subjectInput" type="text" placeholder="Subject"/>
+      <textarea id="noteInput" placeholder="Write note..."></textarea>
+      <button id="saveBtn" class="primary-btn">Save Note</button>
+    </div>
+
+    <div id="notesContainer" class="notes-grid"></div>
+
+    <!-- LIBRARY -->
+    <div class="library-section">
+
+      <h2>📚 Study Library</h2>
+
+      <div class="library-add">
+        <input id="bookTitle" placeholder="Book title"/>
+        <input id="bookAuthor" placeholder="Author"/>
+        <input id="bookCover" placeholder="Cover URL"/>
+        <button id="addBookBtn">Add Book</button>
+      </div>
+
+      <div id="libraryContainer" class="library-grid"></div>
+
+      <div id="libraryEmpty" class="empty-state">
+        No books yet
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= TASKS ================= -->
+  <section id="todosSection" class="page-section">
+
+    <h1>Tasks</h1>
+
+    <div class="todo-editor">
+
+      <input id="taskInput" placeholder="Task"/>
+      <input id="dueDateInput" type="date"/>
+
+      <select id="priorityInput">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+
+      <button id="addTaskBtn">Add Task</button>
+
+    </div>
+
+    <div id="tasksContainer"></div>
+
+  </section>
+
+  <!-- ================= POMODORO ================= -->
+  <section id="pomodoroSection" class="page-section">
+
+    <h1>Pomodoro</h1>
+
+    <div class="pomodoro-card">
+
+      <div class="circle-container">
+
+        <svg width="220" height="220">
+          <circle cx="110" cy="110" r="100" class="progress-bg"></circle>
+          <circle id="progressCircle" cx="110" cy="110" r="100" class="progress-bar"></circle>
+        </svg>
+
+        <div class="timer-center">
+          <div id="timerDisplay">25:00</div>
+          <small id="timerMode">Focus Mode</small>
+        </div>
+
+      </div>
+
+      <div class="timer-settings">
+        <input id="focusTime" type="number" value="25"/>
+        <input id="breakTime" type="number" value="5"/>
+      </div>
+
+      <div class="pomodoro-buttons">
+        <button id="startTimerBtn">Start</button>
+        <button id="pauseTimerBtn">Pause</button>
+        <button id="resetTimerBtn">Reset</button>
+      </div>
+
+      <!-- 🎵 AMBIENT MUSIC -->
+      <div class="music-player-card">
+
+        <h3>🎵 Ambient Study Music</h3>
+
+        <select id="soundSelect">
+          <option value="lofi">Lo-fi</option>
+          <option value="rain">Rain</option>
+          <option value="forest">Forest</option>
+          <option value="cafe">Cafe</option>
+        </select>
+
+        <div class="music-controls">
+          <button id="playMusicBtn">▶ Play</button>
+          <button id="pauseMusicBtn">⏸ Pause</button>
+        </div>
+
+        <input id="volumeControl" type="range" min="0" max="1" step="0.1"/>
+
+      </div>
+
+      <p>
+        Sessions: <span id="sessionCount">0</span> |
+        Streak: <span id="streakCount">0</span>
+      </p>
+
+    </div>
+
+  </section>
+
+  </main>
+
+</div>
+
+<script type="module" src="js/app.js"></script>
+
+</body>
+</html>

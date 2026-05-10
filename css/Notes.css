@@ -1,0 +1,234 @@
+.editor {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  background: var(--card);
+
+  padding: 24px;
+
+  border-radius: 18px;
+
+  box-shadow: var(--shadow);
+
+  margin-bottom: 30px;
+}
+
+.notes-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fill, minmax(280px, 1fr));
+
+  gap: 20px;
+}
+
+.note {
+  background: var(--card);
+
+  padding: 20px;
+
+  border-radius: 18px;
+
+  box-shadow: var(--shadow);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.note h3 {
+  font-size: 20px;
+}
+
+.note p {
+  line-height: 1.5;
+
+  opacity: 0.9;
+
+  word-break: break-word;
+}
+
+.note-meta {
+  font-size: 13px;
+
+  opacity: 0.6;
+}
+
+.note-actions {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: auto;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 10px 14px;
+
+  border-radius: 10px;
+
+  color: white;
+}
+
+.edit-btn {
+  background: var(--primary);
+}
+
+.delete-btn {
+  background: var(--danger);
+}
+
+.empty-state {
+  opacity: 0.7;
+
+  text-align: center;
+
+  margin-top: 30px;
+}
+/* =========================
+   LIBRARY
+========================= */
+
+.library-section {
+  margin-top: 50px;
+}
+
+.library-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 25px;
+
+  gap: 20px;
+}
+
+.library-top input {
+  padding: 12px 18px;
+
+  border-radius: 14px;
+
+  border: 1px solid var(--border);
+
+  background: var(--card);
+
+  color: var(--text);
+}
+
+.library-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fill, minmax(200px, 1fr));
+
+  gap: 22px;
+}
+
+.library-card {
+  background: var(--card);
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  box-shadow: var(--shadow);
+
+  transition: 0.25s ease;
+
+  padding-bottom: 20px;
+}
+
+.library-card:hover {
+  transform: translateY(-5px);
+}
+
+.library-card img {
+  width: 100%;
+  height: 260px;
+
+  object-fit: cover;
+}
+
+.library-card h3 {
+  padding: 14px 16px 4px;
+}
+
+.library-card p {
+  padding: 0 16px;
+
+  opacity: 0.7;
+
+  margin-bottom: 18px;
+}
+
+.library-card a {
+  margin-left: 16px;
+
+  background: var(--primary);
+
+  color: white;
+
+  padding: 10px 16px;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  display: inline-block;
+}
+.library-section {
+  margin-top: 40px;
+}
+
+.library-add {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.library-add input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.library-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 15px;
+}
+
+.book-card {
+  background: var(--card);
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.book-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.delete-btn {
+  margin-top: 8px;
+  background: red;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.empty-state {
+  opacity: 0.6;
+  text-align: center;
+  padding: 20px;
+}

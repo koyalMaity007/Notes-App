@@ -1,0 +1,50 @@
+@media (max-width: 900px) {
+
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sidebar nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .sidebar button {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .stats-grid {
+    flex-direction: column;
+  }
+
+  .dashboard-side {
+    flex-direction: column;
+  }
+
+  .pomodoro-buttons {
+    flex-direction: column;
+  }
+
+}

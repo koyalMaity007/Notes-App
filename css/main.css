@@ -1,0 +1,316 @@
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1c1c1c;
+  --primary: #2563eb;
+  --danger: #ef4444;
+  --border: #dbe3f0;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+body.dark {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e2e8f0;
+  --primary: #3b82f6;
+  --border: #334155;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  transition: 0.3s ease;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+}
+
+textarea {
+  resize: none;
+  min-height: 140px;
+}
+button:active {
+  transform: scale(0.98);
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+body,
+input,
+textarea,
+button,
+select {
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+body {
+  background: linear-gradient(135deg, #e6f0ff, #f7fbff);
+}
+
+body.dark {
+  background: linear-gradient(135deg, #050b1a, #0a1630);
+}
+
+/* GLASS EFFECT */
+.card,
+.widget,
+.stat-card,
+.note,
+.task-card,
+.pomodoro-card {
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* BUTTON STYLE */
+button {
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+/* SOFT SHADOW */
+.note,
+.task-card,
+.stat-card,
+.widget {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* LIGHT MODE ACCENT */
+:root {
+  --primary: #4da3ff;
+}
+
+/* DARK MODE BLUE GLOW */
+body.dark {
+  --primary: #6ab7ff;
+}
+
+button {
+  background: var(--primary);
+  color: white;
+}
+.stat-card,
+.widget,
+.note,
+.task-card,
+.pomodoro-card {
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.stat-card:hover,
+.widget:hover,
+.note:hover,
+.task-card:hover {
+  transform: translateY(-5px);
+}
+.pomodoro-card {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 24px;
+
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(15px);
+
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+/* DARK MODE AESTHETIC */
+body.dark .pomodoro-card {
+  background: rgba(15, 23, 42, 0.7);
+}
+
+/* MODE TITLE */
+.mode-title {
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+/* BIG TIMER */
+.timer-display {
+  font-size: 80px;
+  font-weight: bold;
+  margin: 25px 0;
+
+  color: var(--primary);
+}
+
+/* GLOW EFFECT */
+.glow {
+  text-shadow: 0 0 20px rgba(77,163,255,0.6);
+}
+
+/* SETTINGS */
+.timer-settings {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.timer-settings input {
+  width: 80px;
+  text-align: center;
+}
+
+/* BUTTONS */
+.enhanced {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 18px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.primary {
+  background: #4da3ff;
+  color: white;
+}
+
+.danger {
+  background: #ff4d6d;
+  color: white;
+}
+
+/* hover animation */
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+/* sessions text */
+.sessions {
+  margin-top: 20px;
+  opacity: 0.7;
+}
+:root {
+  --primary: #4da3ff;
+  --bg: #eaf3ff;
+  --card: rgba(255,255,255,0.7);
+  --shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+body.dark {
+  --bg: #0b1220;
+  --card: rgba(20,30,50,0.6);
+  --primary: #6ab7ff;
+}
+
+body {
+  background: var(--bg);
+  transition: 0.4s ease;
+}
+
+/* GLOBAL CARD STYLE */
+.widget,
+.stat-card,
+.task-card,
+.note,
+.pomodoro-card {
+  background: var(--card);
+  box-shadow: var(--shadow);
+  border-radius: 18px;
+  transition: 0.3s ease;
+}
+
+/* HOVER ANIMATION */
+.widget:hover,
+.stat-card:hover,
+.task-card:hover,
+.note:hover {
+  transform: translateY(-5px);
+}
+.circle-container {
+  position: relative;
+  width: 220px;
+  margin: 20px auto;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-bg {
+  fill: none;
+  stroke: rgba(255,255,255,0.1);
+  stroke-width: 10;
+}
+
+.progress-bar {
+  fill: none;
+  stroke: #4da3ff;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 628;
+  stroke-dashoffset: 628;
+  transition: 1s linear;
+}
+
+.timer-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.timer-settings {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.timer-settings input {
+  width: 70px;
+  text-align: center;
+}
